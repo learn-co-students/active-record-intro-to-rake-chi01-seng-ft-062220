@@ -40,6 +40,12 @@ describe "Rakefile" do
         sql = "SELECT name FROM sqlite_master WHERE type='table'ORDER BY name;"
         expect(DB[:conn].execute(sql).first).to include("students")
       end
+      
+      # desc 'seed the database with some dummy data'
+      # task :seed do
+      #   require_relative './db/seeds.rb'
+      # end
+  
     end
 
     describe 'db:seed' do
